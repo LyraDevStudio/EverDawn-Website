@@ -1,0 +1,125 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-sand-light: #F5E9D2;
+    --color-sand: #E8D5B5;
+    --color-sand-dark: #D4C09A;
+    --color-amber: #FFB000;
+    --color-amber-dark: #D98A00;
+    --color-amber-glow: #FFC940;
+    --color-slate-text: #1F2937;
+    --color-ivory: #FAFAF7;
+  }
+
+  * {
+    @apply border-gray-200;
+  }
+
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply bg-ivory text-slate-text;
+    font-feature-settings: 'rlig' 1, 'calt' 1;
+  }
+}
+
+@layer utilities {
+  /* Animations personnalisées */
+  .animation-delay-200 {
+    animation-delay: 200ms;
+  }
+
+  .animation-delay-400 {
+    animation-delay: 400ms;
+  }
+
+  .animation-delay-600 {
+    animation-delay: 600ms;
+  }
+
+  /* Scrollbar personnalisée */
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-track {
+    background: var(--color-sand-light);
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    background: var(--color-amber);
+    border-radius: 4px;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-thumb:hover {
+    background: var(--color-amber-dark);
+  }
+
+  /* Effets de lueur */
+  .glow-amber {
+    box-shadow: 0 0 20px rgba(255, 176, 0, 0.4);
+  }
+
+  .glow-amber-strong {
+    box-shadow: 0 0 40px rgba(255, 176, 0, 0.8);
+  }
+
+  /* Gradient text */
+  .gradient-text-amber {
+    background: linear-gradient(135deg, #FFB000 0%, #D98A00 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+/* Animations personnalisées CSS */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes glowPulse {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(255, 176, 0, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(255, 176, 0, 0.8);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Focus visible pour accessibilité */
+@layer base {
+  *:focus-visible {
+    @apply outline-2 outline-offset-2 outline-amber;
+  }
+}
