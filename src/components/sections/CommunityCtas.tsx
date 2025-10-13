@@ -18,7 +18,7 @@ export function CommunityCtas() {
               Rejoignez Discord
             </h3>
             <p className="text-slate-text/70 mb-6 text-center">
-              Discutez avec la communaute, participez aux evenements, et restez informe des dernieres nouveautes.
+              Discutez avec la communauté, participez aux événements, et restez informé des dernières nouveautés.
             </p>
             <a
               href={siteConfig.urls.discord}
@@ -40,7 +40,7 @@ export function CommunityCtas() {
               Boutique
             </h3>
             <p className="text-slate-text/70 mb-6 text-center">
-              Decouvrez nos packs exclusifs pour ameliorer votre experience de jeu et soutenir le serveur.
+              Découvrez nos packs exclusifs pour améliorer votre expérience de jeu et soutenir le serveur.
             </p>
             <a
               href={siteConfig.urls.store}
@@ -62,7 +62,7 @@ export function CommunityCtas() {
               Votez pour nous
             </h3>
             <p className="text-slate-text/70 mb-6 text-center">
-              Soutenez Everdawn en votant quotidiennement et recevez des recompenses exclusives en jeu.
+              Soutenez Everdawn en votant quotidiennement et recevez des récompenses exclusives en jeu.
             </p>
             <a
               href={siteConfig.urls.vote}

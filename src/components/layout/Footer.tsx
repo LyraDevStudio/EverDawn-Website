@@ -44,7 +44,7 @@ export function Footer() {
 
           {/* Communauté */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Communaute</h3>
+            <h3 className="text-lg font-semibold mb-4">Communauté</h3>
             <ul className="space-y-2">
               {siteConfig.footer.links.social.map((link) => (
                 <li key={link.href}>

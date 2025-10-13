@@ -16,10 +16,10 @@ export function FaqAccordion() {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl sm:text-5xl font-display font-bold text-slate-text mb-4">
-            Questions Frequentes
+            Questions Fréquentes
           </h2>
           <p className="text-lg text-slate-text/70">
-            Trouvez rapidement les reponses a vos questions
+            Trouvez rapidement les réponses à vos questions
           </p>
         </div>
 

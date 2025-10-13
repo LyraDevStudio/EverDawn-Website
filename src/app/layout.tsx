@@ -21,7 +21,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: `${siteConfig.name} - ${siteConfig.slogan}`,
   description: siteConfig.description,
-  keywords: ['minecraft', 'oneblock', 'serveur', 'everdawn', 'magie', 'feerique', 'communaute', 'aventure'],
+  keywords: ['minecraft', 'oneblock', 'serveur', 'everdawn', 'magie', 'féerique', 'communauté', 'aventure'],
   authors: [{ name: 'Everdawn Team' }],
   creator: 'Everdawn',
   publisher: 'Everdawn',
@@ -63,7 +63,7 @@ export const metadata: Metadata = {
     },
   },
   verification: {
-    // Ajouter Google Search Console verification si necessaire
+    // Ajouter Google Search Console verification si nécessaire
   },
 };
 

@@ -10,8 +10,8 @@ export function Gallery() {
   const galleryItems = [
     { src: '/assets/media/gallery/img1.jpg', alt: 'Spawn principal d\'Everdawn' },
     { src: '/assets/media/gallery/img2.gif', alt: 'Animation magique' },
-    { src: '/assets/media/gallery/img3.mp4', alt: 'Cinematique d\'introduction' },
-    { src: '/assets/media/gallery/img4.jpg', alt: 'Ile de joueur' },
+    { src: '/assets/media/gallery/img3.mp4', alt: 'Cinématique d\'introduction' },
+    { src: '/assets/media/gallery/img4.jpg', alt: 'Île de joueur' },
     { src: '/assets/media/gallery/img5.jpg', alt: 'Donjon mystique' },
     { src: '/assets/media/gallery/img6.gif', alt: 'Effet de rang' },
   ];
@@ -24,7 +24,7 @@ export function Gallery() {
             Galerie
           </h2>
           <p className="text-lg text-slate-text/70">
-            Decouvrez l\'univers magique d\'Everdawn en images
+            Découvrez l\'univers magique d\'Everdawn en images
           </p>
         </div>
 

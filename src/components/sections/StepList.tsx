@@ -12,7 +12,7 @@ export function StepList() {
             Comment rejoindre ?
           </h2>
           <p className="text-lg text-slate-text/70">
-            Suivez ces etapes simples pour commencer votre aventure sur Everdawn
+            Suivez ces étapes simples pour commencer votre aventure sur Everdawn
           </p>
         </div>
 
@@ -25,7 +25,7 @@ export function StepList() {
                 key={step.number}
                 className="relative bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
               >
-                {/* Numero de l'etape */}
+                {/* Numéro de l'étape */}
                 <div className="absolute -top-6 left-8 w-12 h-12 bg-gradient-amber rounded-full flex items-center justify-center text-white text-2xl font-bold shadow-lg">
                   {step.number}
                 </div>
@@ -42,7 +42,7 @@ export function StepList() {
                   {step.description}
                 </p>
 
-                {/* Fleche de connexion (sauf derniere etape) */}
+                {/* Flèche de connexion (sauf dernière étape) */}
                 {index < siteConfig.steps.length - 1 && (
                   <div className="hidden md:block absolute top-1/2 -right-4 transform -translate-y-1/2 text-amber">
                     <Icons.ArrowRight className="w-8 h-8" />
