@@ -32,6 +32,7 @@ const config: Config = {
       animation: {
         'fade-in': 'fadeIn 0.6s ease-out',
         'slide-in': 'slideIn 0.4s ease-out',
+        'slide-in-right': 'slideInRight 0.3s ease-out',
         'glow-pulse': 'glowPulse 2s ease-in-out infinite',
         'float': 'float 3s ease-in-out infinite',
       },
@@ -43,6 +44,10 @@ const config: Config = {
         slideIn: {
           '0%': { transform: 'translateX(100%)' },
           '100%': { transform: 'translateX(0)' },
+        },
+        slideInRight: {
+          '0%': { opacity: '0', transform: 'translateX(100%)' },
+          '100%': { opacity: '1', transform: 'translateX(0)' },
         },
         glowPulse: {
           '0%, 100%': { boxShadow: '0 0 20px rgba(255, 176, 0, 0.4)' },

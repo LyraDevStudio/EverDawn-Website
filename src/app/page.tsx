@@ -6,10 +6,13 @@ import { Gallery } from '@/components/sections/Gallery';
 import { CommunityCtas } from '@/components/sections/CommunityCtas';
 import { FaqAccordion } from '@/components/sections/FaqAccordion';
 import { Footer } from '@/components/layout/Footer';
+import { BackToTop } from '@/components/ui/BackToTop';
+import { ScrollProgress } from '@/components/ui/ScrollProgress';
 
 export default function Home() {
   return (
     <>
+      <ScrollProgress />
       <Header />
       <main className="min-h-screen">
         <Hero />
@@ -20,6 +23,7 @@ export default function Home() {
         <FaqAccordion />
       </main>
       <Footer />
+      <BackToTop />
     </>
   );
 }

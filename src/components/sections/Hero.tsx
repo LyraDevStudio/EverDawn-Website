@@ -5,14 +5,17 @@ import { Copy, Check, ExternalLink } from 'lucide-react';
 import { siteConfig } from '@/config/site';
 import { MediaWithFallback } from '@/components/ui/MediaWithFallback';
 import { ServerStatus } from '@/components/ui/ServerStatus';
+import { Toast } from '@/components/ui/Toast';
 
 export function Hero() {
   const [copied, setCopied] = useState(false);
+  const [showToast, setShowToast] = useState(false);
 
   const copyToClipboard = async () => {
     try {
       await navigator.clipboard.writeText(siteConfig.urls.serverIp);
       setCopied(true);
+      setShowToast(true);
       setTimeout(() => setCopied(false), 2000);
     } catch (err) {
       console.error('Failed to copy:', err);
@@ -50,10 +53,14 @@ export function Hero() {
           <ServerStatus />
           
           {/* Bloc adresse IP */}
-          <div className="inline-flex items-center gap-3 bg-ivory/95 backdrop-blur-sm px-6 py-4 rounded-xl shadow-2xl">
-            <span className="text-2xl font-mono font-bold text-slate-text">
+          <div className="inline-flex items-center gap-3 bg-ivory/95 backdrop-blur-sm px-6 py-4 rounded-xl shadow-2xl group hover:shadow-amber/20 transition-all duration-300">
+            <button
+              onClick={copyToClipboard}
+              className="text-2xl font-mono font-bold text-slate-text hover:text-amber transition-colors cursor-pointer"
+              aria-label="Cliquer pour copier l'adresse IP"
+            >
               {siteConfig.urls.serverIp}
-            </span>
+            </button>
             <button
               onClick={copyToClipboard}
               className="p-2 hover:bg-sand rounded-lg transition-colors"
@@ -62,7 +69,7 @@ export function Hero() {
               {copied ? (
                 <Check className="w-6 h-6 text-green-600" />
               ) : (
-                <Copy className="w-6 h-6 text-amber" />
+                <Copy className="w-6 h-6 text-amber group-hover:scale-110 transition-transform" />
               )}
             </button>
           </div>
@@ -94,6 +101,15 @@ export function Hero() {
           <div className="w-1 h-3 bg-ivory rounded-full animate-pulse" />
         </div>
       </div>
+
+      {/* Toast notification */}
+      {showToast && (
+        <Toast
+          message="Adresse IP copiée !"
+          type="success"
+          onClose={() => setShowToast(false)}
+        />
+      )}
     </section>
   );
 }
