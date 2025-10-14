@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { Copy, Check, ExternalLink } from 'lucide-react';
 import { siteConfig } from '@/config/site';
 import { MediaWithFallback } from '@/components/ui/MediaWithFallback';
+import { ServerStatus } from '@/components/ui/ServerStatus';
 
 export function Hero() {
   const [copied, setCopied] = useState(false);
@@ -43,22 +44,28 @@ export function Hero() {
           {siteConfig.hero.subtitle}
         </p>
 
-        {/* Bloc adresse IP */}
-        <div className="inline-flex items-center gap-3 bg-ivory/95 backdrop-blur-sm px-6 py-4 rounded-xl shadow-2xl mb-8 animate-fade-in animation-delay-400">
-          <span className="text-2xl font-mono font-bold text-slate-text">
-            {siteConfig.urls.serverIp}
-          </span>
-          <button
-            onClick={copyToClipboard}
-            className="p-2 hover:bg-sand rounded-lg transition-colors"
-            aria-label="Copier l'adresse IP"
-          >
-            {copied ? (
-              <Check className="w-6 h-6 text-green-600" />
-            ) : (
-              <Copy className="w-6 h-6 text-amber" />
-            )}
-          </button>
+        {/* Server status and IP block */}
+        <div className="flex flex-col items-center gap-4 mb-8 animate-fade-in animation-delay-400">
+          {/* Server status */}
+          <ServerStatus />
+          
+          {/* Bloc adresse IP */}
+          <div className="inline-flex items-center gap-3 bg-ivory/95 backdrop-blur-sm px-6 py-4 rounded-xl shadow-2xl">
+            <span className="text-2xl font-mono font-bold text-slate-text">
+              {siteConfig.urls.serverIp}
+            </span>
+            <button
+              onClick={copyToClipboard}
+              className="p-2 hover:bg-sand rounded-lg transition-colors"
+              aria-label="Copier l'adresse IP"
+            >
+              {copied ? (
+                <Check className="w-6 h-6 text-green-600" />
+              ) : (
+                <Copy className="w-6 h-6 text-amber" />
+              )}
+            </button>
+          </div>
         </div>
 
         {/* CTA Buttons */}
