@@ -29,16 +29,32 @@ export function ServerStatus({ className = '', compact = false }: ServerStatusPr
         setLoading(true);
         setError(false);
         
-        // Using mcsrvstat.us API - a public Minecraft server status API
-        // Primary: mc.everdawn.fr (Cloudflare, faster)
-        // Fallback: Direct IP for more accurate ping
-        const response = await fetch('https://api.mcsrvstat.us/3/mc.everdawn.fr', {
+        // Try primary domain first (mc.everdawn.fr via Cloudflare)
+        let response = await fetch('https://api.mcsrvstat.us/3/mc.everdawn.fr', {
           cache: 'no-store',
         });
         
-        if (!response.ok) throw new Error('Failed to fetch');
+        if (!response.ok) throw new Error('Primary fetch failed');
         
-        const data = await response.json();
+        let data = await response.json();
+        
+        // If domain query fails or server appears offline, try direct IP fallback
+        if (!data.online) {
+          console.log('Primary domain offline, trying direct IP fallback...');
+          
+          // Fallback to direct IP (not exposed in UI)
+          const fallbackResponse = await fetch('https://api.mcsrvstat.us/3/193.38.250.145:10003', {
+            cache: 'no-store',
+          });
+          
+          if (fallbackResponse.ok) {
+            const fallbackData = await fallbackResponse.json();
+            // Use fallback data if it shows server is actually online
+            if (fallbackData.online) {
+              data = fallbackData;
+            }
+          }
+        }
         
         setStatus({
           online: data.online || false,
@@ -51,6 +67,31 @@ export function ServerStatus({ className = '', compact = false }: ServerStatusPr
         });
       } catch (err) {
         console.error('Error fetching server status:', err);
+        
+        // Last resort: try direct IP fallback on error
+        try {
+          const fallbackResponse = await fetch('https://api.mcsrvstat.us/3/193.38.250.145:10003', {
+            cache: 'no-store',
+          });
+          
+          if (fallbackResponse.ok) {
+            const fallbackData = await fallbackResponse.json();
+            setStatus({
+              online: fallbackData.online || false,
+              players: fallbackData.players ? {
+                online: fallbackData.players.online || 0,
+                max: fallbackData.players.max || 100,
+              } : undefined,
+              version: fallbackData.version,
+              motd: fallbackData.motd?.clean?.[0],
+            });
+            setLoading(false);
+            return;
+          }
+        } catch (fallbackErr) {
+          console.error('Fallback also failed:', fallbackErr);
+        }
+        
         setError(true);
         setStatus({ online: false });
       } finally {
