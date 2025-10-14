@@ -5,8 +5,8 @@
 
 export const siteConfig = {
   name: 'Everdawn',
-  slogan: 'L\'aventure OneBlock magique et féerique',
-  description: 'Rejoignez Everdawn, le serveur Minecraft OneBlock immersif où la magie rencontre l\'aventure. Explorez, construisez, et vivez une expérience unique dans un univers enchanté.',
+  slogan: "L'aventure OneBlock magique et féerique",
+  description: "Rejoignez Everdawn, le serveur Minecraft OneBlock immersif où la magie rencontre l'aventure. Explorez, construisez, et vivez une expérience unique dans un univers enchanté.",
   
   // URLs principales
   urls: {
@@ -28,14 +28,14 @@ export const siteConfig = {
 
   // Hero section
   hero: {
-    title: 'Bienvenue dans l\'univers d\'Everdawn',
+    title: "Bienvenue dans l'univers d'Everdawn",
     subtitle: 'Un serveur OneBlock unique où chaque bloc révèle une aventure magique, féerique et immersive.',
     ctaPrimary: 'Rejoindre le serveur',
     ctaSecondary: 'Rejoindre le Discord',
     backgroundMedia: '/assets/media/hero.jpg', // Peut etre .jpg, .gif, ou .mp4
   },
 
-  // Points cles (ruban d'icones)
+  // Points clés (ruban d'icônes)
   highlights: [
     { icon: 'Sparkles', text: 'Magie et féerie' },
     { icon: 'Users', text: 'Communauté active' },
@@ -45,13 +45,13 @@ export const siteConfig = {
     { icon: 'Zap', text: 'Performances optimales' },
   ],
 
-  // Fonctionnalites principales (25+ items)
+  // Fonctionnalités principales (25+ items)
   features: [
     {
       id: 'resource-pack',
       icon: 'Package',
       title: 'Resource Pack',
-      description: 'Un resource pack sur mesure qui sublime l\'univers magique d\'Everdawn avec des textures enchanteresses.',
+      description: "Un resource pack sur mesure qui sublime l'univers magique d'Everdawn avec des textures enchanteresses.",
     },
     {
       id: 'leaderboards',
@@ -68,26 +68,20 @@ export const siteConfig = {
     {
       id: 'island-panel',
       icon: 'LayoutGrid',
-      title: 'Panneau d\'ile',
+      title: "Panneau d'île",
       description: 'Gérez votre île facilement avec une interface intuitive et complète.',
     },
     {
       id: 'welcome-message',
       icon: 'MessageCircle',
       title: 'Message de bienvenue',
-      description: 'Personnalisez le message d\'accueil de votre ile pour impressionner vos visiteurs.',
+      description: "Personnalisez le message d'accueil de votre île pour impressionner vos visiteurs.",
     },
     {
       id: 'player-icons',
       icon: 'User',
-      title: 'Icones de joueur',
-      description: 'Choisissez parmi une large gamme d\'avatars pour personnaliser votre profil.',
-    },
-    {
-      id: 'staff-chat',
-      icon: 'Shield',
-      title: 'Chat staff',
-      description: 'Une équipe réactive et bienveillante, toujours à l\'écoute de la communauté.',
+      title: 'Icônes de joueur',
+      description: "Choisissez parmi une large gamme d'avatars pour personnaliser votre profil.",
     },
     {
       id: 'message-colors',
@@ -104,13 +98,13 @@ export const siteConfig = {
     {
       id: 'custom-motd',
       icon: 'FileText',
-      title: 'MOTD personnalise',
+      title: 'MOTD personnalisé',
       description: 'Un message du jour dynamique et immersif qui évolue avec les événements du serveur.',
     },
     {
       id: 'generator',
       icon: 'Cpu',
-      title: 'Generateur',
+      title: 'Générateur',
       description: 'Améliorez votre générateur de bloc pour débloquer de nouvelles ressources rares.',
     },
     {
@@ -134,7 +128,7 @@ export const siteConfig = {
     {
       id: 'upgrades',
       icon: 'TrendingUp',
-      title: 'Ameliorations',
+      title: 'Améliorations',
       description: 'Débloquez des améliorations puissantes pour votre île et vos outils.',
     },
     {
@@ -147,12 +141,12 @@ export const siteConfig = {
       id: 'animations',
       icon: 'Film',
       title: 'Animations',
-      description: 'Des animations fluides et enchanteresses pour une experience immersive.',
+      description: 'Des animations fluides et enchanteresses pour une expérience immersive.',
     },
     {
       id: 'cinematic',
       icon: 'Video',
-      title: 'Cinematiques',
+      title: 'Cinématiques',
       description: 'Des séquences cinématiques époustouflantes pour les événements majeurs.',
     },
     {
@@ -171,7 +165,7 @@ export const siteConfig = {
       id: 'chest-shop',
       icon: 'ShoppingCart',
       title: 'Boutique coffres',
-      description: 'Créez vos propres boutiques et échangez avec d\'autres joueurs.',
+      description: "Créez vos propres boutiques et échangez avec d'autres joueurs.",
     },
     {
       id: 'dungeons',
@@ -183,12 +177,12 @@ export const siteConfig = {
       id: 'clans',
       icon: 'Users',
       title: 'Clans',
-      description: 'Rejoignez ou créez un clan pour partager l\'aventure avec vos alliés.',
+      description: "Rejoignez ou créez un clan pour partager l'aventure avec vos alliés.",
     },
     {
       id: 'daily',
       icon: 'Calendar',
-      title: 'Quetes quotidiennes',
+      title: 'Quêtes quotidiennes',
       description: 'Complétez des défis quotidiens pour gagner des récompenses exclusives.',
     },
     {
@@ -200,7 +194,7 @@ export const siteConfig = {
     {
       id: 'cosmetics',
       icon: 'Shirt',
-      title: 'Cosmetiques',
+      title: 'Cosmétiques',
       description: 'Débloquez des cosmétiques exclusifs pour personnaliser votre personnage.',
     },
     {
@@ -212,29 +206,29 @@ export const siteConfig = {
     {
       id: 'likes',
       icon: 'Heart',
-      title: 'Systeme de likes',
+      title: 'Système de likes',
       description: 'Soutenez vos joueurs préférés et leur île avec un système de likes.',
     },
   ],
 
-  // Etapes pour rejoindre
+  // Étapes pour rejoindre
   steps: [
     {
       number: 1,
       title: 'Lancez Minecraft',
-      description: 'Ouvrez votre launcher Minecraft et assurez-vous d\'utiliser la version Java 1.20+.',
+      description: "Ouvrez votre launcher Minecraft et assurez-vous d'utiliser la version Java 1.20+.",
       icon: 'Play',
     },
     {
       number: 2,
       title: 'Ajoutez le serveur',
-      description: 'Dans le menu multijoueur, ajoutez le serveur avec l\'adresse play.everdawn.fr.',
+      description: "Dans le menu multijoueur, ajoutez le serveur avec l'adresse play.everdawn.fr.",
       icon: 'Server',
     },
     {
       number: 3,
-      title: 'Rejoignez l\'aventure',
-      description: 'Connectez-vous et laissez la magie d\'Everdawn vous transporter dans un monde féerique.',
+      title: "Rejoignez l'aventure",
+      description: "Connectez-vous et laissez la magie d'Everdawn vous transporter dans un monde féerique.",
       icon: 'Sparkles',
     },
   ],
@@ -243,18 +237,18 @@ export const siteConfig = {
   faq: [
     {
       question: 'Quelle version de Minecraft est requise ?',
-      answer: 'Everdawn fonctionne sur Minecraft Java Edition 1.20 et versions ultérieures. Nous recommandons d\'utiliser la dernière version stable pour une expérience optimale.',
+      answer: "Everdawn fonctionne sur Minecraft Java Edition 1.20 et versions ultérieures. Nous recommandons d'utiliser la dernière version stable pour une expérience optimale.",
     },
     {
       question: 'Le serveur est-il gratuit ?',
       answer: 'Oui, Everdawn est entièrement gratuit. Vous pouvez acheter des améliorations cosmétiques dans la boutique pour soutenir le serveur, mais toutes les fonctionnalités principales sont accessibles gratuitement.',
     },
     {
-      question: 'Comment puis-je proteger mon ile ?',
-      answer: 'Votre île est automatiquement protégée. Vous pouvez gérer les permissions d\'accès via le panneau d\'île et inviter des joueurs de confiance à vous rejoindre.',
+      question: 'Comment puis-je protéger mon île ?',
+      answer: "Votre île est automatiquement protégée. Vous pouvez gérer les permissions d'accès via le panneau d'île et inviter des joueurs de confiance à vous rejoindre.",
     },
     {
-      question: 'Y a-t-il des evenements reguliers ?',
+      question: 'Y a-t-il des événements réguliers ?',
       answer: 'Oui ! Nous organisons des événements hebdomadaires avec des récompenses exclusives, des donjons spéciaux, et des défis communautaires.',
     },
     {
@@ -274,8 +268,8 @@ export const siteConfig = {
         { label: 'Communauté', href: '#communaute' },
       ],
       legal: [
-        { label: 'Conditions d\'utilisation', href: '/terms' },
-        { label: 'Politique de confidentialite', href: '/privacy' },
+        { label: "Conditions d'utilisation", href: '/terms' },
+        { label: 'Politique de confidentialité', href: '/privacy' },
       ],
       social: [
         { label: 'Discord', href: 'https://discord.everdawn.fr' },
@@ -285,7 +279,7 @@ export const siteConfig = {
     },
   },
 
-  // Chemins medias par defaut
+  // Chemins médias par défaut
   media: {
     defaultHero: '/assets/media/hero.jpg',
     defaultFeatureImage: '/assets/media/feature-placeholder.jpg',
