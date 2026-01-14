@@ -260,7 +260,7 @@ export const siteConfig = {
   // Footer
   footer: {
     description: 'Everdawn - Le serveur OneBlock magique et féerique où chaque bloc raconte une histoire.',
-    copyright: '© Everdawn 2025',
+    copyright: '© Everdawn 2025-2026',
     links: {
       navigation: [
         { label: 'Accueil', href: '#accueil' },

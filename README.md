@@ -192,7 +192,7 @@ Ce projet respecte **integralement** le brief fourni :
 
 ## Licence
 
-© Everdawn 2025 - Tous droits reserves
+© Everdawn 2025-2026 - Tous droits reserves
 
 ---
 
